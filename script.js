@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
 
     posterRequest.done(function (data){
-      var img = $("<img/>");
+      var img = $("<img class='posterImg'/>");
       img.attr("src", data["Poster"]);
       $(".posterArea").html(img);
     });
@@ -24,6 +24,7 @@ $(document).ready(function() {
     e.preventDefault();
     var userInput = $("#searchTerm").val();
 
+    $(".results").empty();
     var request = $.ajax({
       url: "http://www.omdbapi.com/",
       type: "get",
@@ -37,10 +38,9 @@ $(document).ready(function() {
       $(".results").append(build_list(movie));
     });
 
-
     function build_list(movie) {  
       var movieTitle = movie["Title"]
-      var li = $("<li></li>");
+      var li = $("<li class='movieResults'></li>");
       li.data("imdbid", movie["imdbID"]);
       li.append(movie["Title"]);
       return li;

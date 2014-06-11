@@ -1,3 +1,42 @@
 body {
+  text-align: center;
+  background-image: url("http://i.imgur.com/pgmqGHU.png");
+  font-family: "Andale Mono", AndaleMono, monospace;
+}
+
+.movieSearch {
+  font-size: 50px;
+  color: #333C39;
+}
+
+#searchTerm {
+  height: 20px;
+  width: 200px;
   font-size: 20px;
+  color: #4A907A;
+}
+
+.movieResults { /*list items*/
+  margin: 8px;
+  font-size: 20px;
+  list-style: none;
+}
+
+.results {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #475B55;
+  width: 50%;
+  float:left
+}
+
+.posterImg {
+  border: grey solid 2px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.posterArea {
+  width: 50%;
+  float:right;
 }
